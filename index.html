@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Book Reader</title>
+    <script src="tesseract.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <style>
+      pre[data-text] {
+        font-size: 2rem;
+        font-family: inherit;
+        width: 100%;
+        white-space: pre-wrap;
+      }
+      button {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <video width="720" height="560" autoplay muted></video>
+    <button>Recognize It!</button>
+    <pre data-text></pre>
+  </body>
+</html>
