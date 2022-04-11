@@ -3,7 +3,9 @@ const button = document.querySelector("button");
 const textElem = document.querySelector("pre[data-text]");
 
 async function setup() {
-  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+  const stream = await navigator.mediaDevices.getUserMedia({
+    video: { facingMode: { exact: "environment" } },
+  });
   video.srcObject = stream;
   video.addEventListener("playing", async () => {
     const worker = Tesseract.createWorker();
